@@ -10,16 +10,21 @@ function GetSelectedValue() {
 	console.log(result);
 
 	if (result == '1') {
+		console.log('yoga')
+
 		modularBreath(3000, 1500, 'grow', 'shrink');
 		setInterval(() => { modularBreath(3000, 1500, 'grow', 'shrink') }, 7500);
 
 
 
 	} else if (result == '2') {
+		console.log('424')
 		modularBreath(4000, 2000, 'grow2', 'shrink2');
 		setInterval(() => { modularBreath(4000, 2000, 'grow2', 'shrink2') }, 10000);
 
 	} else if (result == '3') {
+		console.log('444')
+
 		modularBreath(4000, 4000, 'grow2', 'shrink2');
 		setInterval(() => { modularBreath(4000, 4000, 'grow2', 'shrink2') }, 12000);
 	} else {
