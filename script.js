@@ -1,27 +1,47 @@
-const container  = document.getElementById('container');
-const text  = document.getElementById('text');
+const container = document.getElementById('container');
+const text = document.getElementById('text');
 
-const totalTime = 7500;
-const breatheTime = (totalTime / 5) * 2;
-const holdTime = totalTime / 5;
+// setInterval(GetSelectedValue, 1000);
 
-// console.log(breatheTime, holdTime);
-breathAnimation();
+function GetSelectedValue() {
+	const e = document.getElementById("method");
+	const result = e.options[e.selectedIndex].value;
+
+	console.log(result);
+
+	if (result == '1') {
+		modularBreath(3000, 1500, 'grow', 'shrink');
+		setInterval(() => { modularBreath(3000, 1500, 'grow', 'shrink') }, 7500);
 
 
-function breathAnimation() {
+
+	} else if (result == '2') {
+		modularBreath(4000, 2000, 'grow2', 'shrink2');
+		setInterval(() => { modularBreath(4000, 2000, 'grow2', 'shrink2') }, 10000);
+
+	} else if (result == '3') {
+		modularBreath(4000, 4000, 'grow2', 'shrink2');
+		setInterval(() => { modularBreath(4000, 4000, 'grow2', 'shrink2') }, 12000);
+	} else {
+		console.error('pilihan anda tidak tersedia');
+	}
+}
+
+
+function modularBreath(breathes, holds, grow, shrink) {
+
+
 	text.innerText = 'Tarik Nafas!';
-	container.className = 'container grow';
+	container.className = `container ${grow}`;
 
 	setTimeout(() => {
 		text.innerText = 'Tahan';
 
 
-		setTimeout(()=> {
+		setTimeout(() => {
 			text.innerText = 'Keluarkan Nafas!';
-			container.className = 'container shrink';
-		},holdTime);
-	}, breatheTime);
-}
+			container.className = `container ${shrink}`;
+		}, holds);
+	}, breathes);
 
-setInterval(breathAnimation,totalTime);
+}
