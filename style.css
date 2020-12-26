@@ -261,7 +261,6 @@ span.pointer {
     margin-top: -20px;
   }
   select:focus {
-    /* border-radius: 20px; */
     border: none;
     outline: none;
     background: #2B5D54;
