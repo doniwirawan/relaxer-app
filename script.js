@@ -1,7 +1,6 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
-// setInterval(GetSelectedValue, 1000);
 
 function GetSelectedValue() {
 	const e = document.getElementById("method");
