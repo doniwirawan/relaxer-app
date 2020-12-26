@@ -174,3 +174,18 @@ span.pointer {
 .container.grow2 {
     animation: grow 4s linear forwards;
 }
+
+
+@media(max-width:412px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 300px;
+        width: 300px;
+        position: relative;
+        transform: scale(.8);
+
+    }
+}
