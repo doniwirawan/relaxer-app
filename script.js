@@ -2,6 +2,11 @@ const container = document.getElementById('container');
 const text = document.getElementById('text');
 
 
+
+modularBreath(4000, 2000, 'grow2', 'shrink2');
+setInterval(() => { modularBreath(4000, 2000, 'grow2', 'shrink2') }, 10000);
+
+
 function GetSelectedValue() {
 	const e = document.getElementById("method");
 	const result = e.options[e.selectedIndex].value;
